@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -59,4 +60,25 @@ hr {
   background-color: lightgray;
   height: 2px;
   width: 100%;
+}
+
+.tasks-container {
+  width: -moz-available;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.task .left-side {
+  display: flex;
+  column-gap: 10px;
 }
