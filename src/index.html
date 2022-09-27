@@ -5,13 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo list</title>
+
+  <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/6ce384dd4f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <div>
-    <h2>Today's To Do</h2>
-  </div>
+  <section id="card-bg">
+    <div id="container">
+      <div class="heading">
+        <h2 class="list-title">Today's To Do</h2>
+        <i class="fa-solid fa-rotate reload-icon"></i>
+      </div>
+      <hr class="line-separator">
+
+      <form action="">
+        <input type="text" placeholder="Add to your list..." class="new-task">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </form>
+      <hr class="line-separator">
+      
+      <ul class="tasks-container">
+        <li>Hello</li>
+        <li>World</li>
+      </ul>
+    </div>
+  </section>
 
 </body>
 
