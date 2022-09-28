@@ -18,6 +18,36 @@ const tasks = [
     description: 'World',
     completed: true,
   },
+  {
+    index: 3,
+    description: '!!!!',
+    completed: true,
+  },
+  {
+    index: 1,
+    description: 'Hello',
+    completed: true,
+  },
+  {
+    index: 2,
+    description: 'World',
+    completed: true,
+  },
+  {
+    index: 3,
+    description: '!!!!',
+    completed: true,
+  },
+  {
+    index: 1,
+    description: 'Hello',
+    completed: true,
+  },
+  {
+    index: 2,
+    description: 'World',
+    completed: true,
+  },
 ];
 
 const createTasks = () => {

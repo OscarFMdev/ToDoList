@@ -80,6 +80,14 @@ hr {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  overflow: scroll;
+  height: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.tasks-container::-webkit-scrollbar {
+  display: none;
 }
 
 .task {
