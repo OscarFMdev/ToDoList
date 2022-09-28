@@ -4,8 +4,16 @@
   border: 0;
 }
 
+.icon {
+  cursor: pointer;
+}
+
+.dots {
+  cursor: all-scroll;
+}
+
 #card-bg {
-  background-color: beige;
+  background: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +29,10 @@
   height: 40%;
   width: 25%;
   min-width: 350px;
+  position: relative;
+  box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
+-webkit-box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
+-moz-box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
 }
 
 .heading {
@@ -76,9 +88,30 @@ hr {
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
+  height: 30px;
 }
 
 .task .left-side {
   display: flex;
   column-gap: 10px;
+}
+
+.completed-container {
+  position: absolute;
+  bottom: 0;
+  background-color: lightgray;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completed-text {
+  color: black;
+  text-decoration: none;
+}
+
+.completed-text:hover {
+  text-decoration: underline;
 }

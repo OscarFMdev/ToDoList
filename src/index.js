@@ -21,8 +21,20 @@ const tasks = [
 ]
 
 const createTasks = () => {
-  tasks.forEach((task) => {
-  });
+  for (let i = 0; i < tasks.length; i += 1) {
+    tasksContainer.innerHTML += `
+    <!-- Task -->
+    <li class="task">
+      <div class="left-side">
+        <input type="checkbox">
+        <p>${tasks[i].description}</p>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical dots"></i>
+    </li>
+    <hr class="line-separator">
+    <!-- Task -->
+    `
+  }
 }
 
 createTasks();
