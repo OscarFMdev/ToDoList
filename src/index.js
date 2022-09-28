@@ -5,20 +5,20 @@ const tasksContainer = document.querySelector('.tasks-container');
 const tasks = [
   {
     index: 1,
-    description: "Hello",
-    completed: true
+    description: 'Hello',
+    completed: true,
   },
   {
     index: 2,
-    description: "World",
-    completed: true
+    description: 'World',
+    completed: true,
   },
   {
     index: 3,
-    description: "!!!!",
-    completed: true
+    description: '!!!!',
+    completed: true,
   },
-]
+];
 
 const createTasks = () => {
   for (let i = 0; i < tasks.length; i += 1) {
@@ -33,8 +33,8 @@ const createTasks = () => {
     </li>
     <hr class="line-separator">
     <!-- Task -->
-    `
+    `;
   }
-}
+};
 
 createTasks();

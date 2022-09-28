@@ -13,7 +13,7 @@ module.exports = {
   ],
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'build') // Changes the directory name
+    path: path.resolve(__dirname, 'build'), // Changes the directory name
   },
   module: {
     rules: [
@@ -26,4 +26,4 @@ module.exports = {
   optimization: {
     runtimeChunk: 'single',
   },
-}
+};

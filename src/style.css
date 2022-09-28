@@ -20,7 +20,6 @@
   height: 100vh;
 }
 
-
 #container {
   display: flex;
   flex-direction: column;
@@ -30,16 +29,17 @@
   width: 25%;
   min-width: 350px;
   position: relative;
-  box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
--webkit-box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
--moz-box-shadow: 15px -2px 63px 13px rgba(0,0,0,0.9);
+  box-shadow: 15px -2px 63px 13px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 15px -2px 63px 13px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 15px -2px 63px 13px rgba(0, 0, 0, 0.9);
 }
 
 .heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: -moz-available;
+  position: relative;
+  width: 98%;
   height: 60px;
 }
 
@@ -53,11 +53,11 @@
 }
 
 form {
-  width: -moz-available;
+  position: relative;
+  width: 93%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -75,7 +75,8 @@ hr {
 }
 
 .tasks-container {
-  width: -moz-available;
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
