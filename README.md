@@ -1,15 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Todo list
 
-> Description the project.
+In this project we will be using webpack to create, edit, and delete tasks from a list of tasks created by the user, the main goals of this project are:
+
+- Use webpack to bundle JavaScript.
+- Learn how to use proper ES6 syntax.
+- Use ES6 modules to write modular JavaScript.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Webpack
+- HTML & CSS
 
 ## Live Demo (if available)
 
@@ -18,39 +22,28 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-### Setup
+Have git installed. (For version control)
+Have text editor installed. (Preferably VSCode)
+Have CSS,HTML & JS Linters installed and configured. For further information, visit this link to get better understanding on each linters used on this project.
 
 ### Install
-
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+With the todo list app you can:
+- Create a new task.
+- Add a new task.
+- Delete a new task.
+- Delete all the tasks completed.
 
 ## Authors
 
-👤 **Author1**
+👤 **Oscar Fernández Muñoz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@OscarFMdev](https://github.com/OscarFMdev)
+- Twitter: [@OscarFMdev](https://twitter.com/OscarFMdev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/OscarFMdev)
 
 ## 🤝 Contributing
 
@@ -63,13 +56,9 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+I want to thank:
+- My coding/learning partners for hearing my problems and helping me.
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
