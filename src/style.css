@@ -8,8 +8,8 @@
   cursor: pointer;
 }
 
-.dots {
-  cursor: all-scroll;
+.delete {
+  cursor: pointer;
 }
 
 #card-bg {
