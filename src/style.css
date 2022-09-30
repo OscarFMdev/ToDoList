@@ -13,7 +13,7 @@
 }
 
 #card-bg {
-  background: lightblue;
+  background: linear-gradient(219deg, #3270d8, #d28d86);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
+  opacity: 0.79;
   height: 40%;
   width: 25%;
   min-width: 350px;

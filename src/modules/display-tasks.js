@@ -1,23 +1,14 @@
-const tasksContainer = document.querySelector('.tasks-container');
-
-const tasks = [
-  {
-    index: 3,
-    description: '!!!',
-  },
-  {
-    index: 1,
-    description: 'hello',
-  },
-  {
-    index: 2,
-    description: 'world',
-  },
-];
+import { store, taskArray } from './store.js';
 
 const displayTasks = () => {
-  tasks.sort((a, b) => a.index - b.index).map((task) => task.description);
-  [...tasks]
+  const tasksContainer = document.querySelector('.tasks-container');
+  console.log(taskArray);
+  taskArray.sort((a, b) => a.index - b.index).map((task) => task.description);
+  for (let i = 0; i < taskArray.length; i += 1) {
+    console.log('hello');
+  }
+
+  taskArray
     .forEach((task, index) => {
       tasksContainer.innerHTML += `
     <!-- Task -->
@@ -31,6 +22,7 @@ const displayTasks = () => {
     <hr class="line-separator">
     <!-- Task -->
     `;
+      store();
     });
   // dragFeature();
 };
