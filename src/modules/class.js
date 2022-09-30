@@ -19,11 +19,14 @@ const deleteTask = (e) => {
   const removableTask = btn.closest('li');
   const taskIndex = removableTask.dataset.indexNumber;
 
-  // Remove element
-  setTimeout(() => {
-    taskArray.splice((taskIndex - 1), 1);
-    store();
-  }, 150);
+  // Remove element from array
+  taskArray.splice((taskIndex - 1), 1);
+  // Remove from html
+  const htmlElement = document.querySelector(`.tasks-container :nth-child(${taskIndex})`);
+  const tasksHTML = document.querySelector('.tasks-container');
+
+  tasksHTML.deleteChild(htmlElement);
+  store();
 };
 
 export {

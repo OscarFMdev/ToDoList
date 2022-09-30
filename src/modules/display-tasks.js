@@ -4,10 +4,6 @@ const displayTasks = () => {
   const tasksContainer = document.querySelector('.tasks-container');
   console.log(taskArray);
   taskArray.sort((a, b) => a.index - b.index).map((task) => task.description);
-  for (let i = 0; i < taskArray.length; i += 1) {
-    console.log('hello');
-  }
-
   taskArray
     .forEach((task, index) => {
       tasksContainer.innerHTML += `
