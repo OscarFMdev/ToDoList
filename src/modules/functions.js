@@ -24,7 +24,7 @@ const deleteTask = (e) => {
     const taskIndex = removableTask.dataset.indexNumber;
 
     // Remove element from array
-    taskArray.splice((taskIndex - 1), 1);
+    taskArray.splice(taskIndex - 1, 1);
     localStorage.setItem('taskInput', taskArray);
     store();
     displayTasks();
@@ -40,13 +40,23 @@ const edit = (e) => {
   const taskIndex = editableTask.dataset.indexNumber;
   const closestIcon = threeDotsIcon[taskIndex - 1];
   if (editableText.matches('p')) {
-    closestIcon.classList.remove('fa-solid', 'fa-ellipsis-vertical', 'drag-icon');
+    closestIcon.classList.remove(
+      'fa-solid',
+      'fa-ellipsis-vertical',
+      'drag-icon',
+    );
     closestIcon.classList.add('fa-regular', 'fa-trash-can', 'delete-icon');
     editableText.setAttribute('contenteditable', 'true');
     editableText.focus();
   }
-  taskArray[taskIndex - 1].description = editableText.innerText;
-  store();
+
+  // event listener to store the edited value to local storage.
+  editableText.addEventListener('blur', () => {
+    taskArray[taskIndex - 1].description = editableText.innerText;
+    closestIcon.classList.remove('fa-regular', 'fa-trash-can', 'delete-icon');
+    closestIcon.classList.add('fa-solid', 'fa-ellipsis-vertical', 'drag-icon');
+    store();
+  });
 };
 
 const checkBoxesStatus = (e) => {
