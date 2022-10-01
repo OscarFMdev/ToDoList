@@ -1,17 +1,17 @@
 import './style.css';
 import displayTasks from './modules/display-tasks.js';
 import {
-  addTask, deleteTask, submit, tasksContainer,
-} from './modules/class.js';
+  addTask, deleteTask, edit, submit, tasksContainer,
+} from './modules/functions.js';
 
 /* Add and remove */
 
 tasksContainer.addEventListener('click', (e) => {
+  edit(e);
   deleteTask(e);
-  displayTasks();
 });
 submit.addEventListener('click', (e) => {
   addTask(e);
-  displayTasks();
 });
+
 displayTasks();
