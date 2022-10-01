@@ -1,7 +1,7 @@
 import './style.css';
 import displayTasks from './modules/display-tasks.js';
 import {
-  addTask, deleteTask, edit, submit, tasksContainer,
+  addTask, checkBoxesStatus, deleteTask, edit, submit, tasksContainer,
 } from './modules/functions.js';
 // import { restoreIcons } from './modules/icons';
 
@@ -10,6 +10,7 @@ import {
 tasksContainer.addEventListener('click', (e) => {
   edit(e);
   deleteTask(e);
+  checkBoxesStatus(e);
 });
 submit.addEventListener('click', (e) => {
   addTask(e);

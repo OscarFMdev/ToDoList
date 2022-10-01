@@ -35,11 +35,28 @@ const deleteTask = (e) => {
 
 const edit = (e) => {
   const editableText = e.target;
-  const threeDotsIcon = document.querySelector('.fa-solid');
+  const threeDotsIcon = document.querySelectorAll('.editable-icon');
+  const editableTask = editableText.closest('li');
+  const taskIndex = editableTask.dataset.indexNumber;
+  const closestIcon = threeDotsIcon[taskIndex - 1];
   if (editableText.matches('p')) {
+    closestIcon.classList.remove('fa-solid', 'fa-ellipsis-vertical', 'drag-icon');
+    closestIcon.classList.add('fa-regular', 'fa-trash-can', 'delete-icon');
     editableText.setAttribute('contenteditable', 'true');
     editableText.focus();
-    threeDotsIcon.classList.add('fa-regular', 'fa-trash-can', 'delete-icon');
+  }
+  taskArray[taskIndex - 1].description = editableText.innerText;
+  store();
+};
+
+const checkBoxesStatus = (e) => {
+  const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+  const clickLocation = e.target;
+  for (let i = 0; i < checkBoxes.length; i += 1) {
+    if (clickLocation === checkBoxes[i]) {
+      const element = clickLocation.closest('li');
+      console.log(element);
+    }
   }
 };
 
@@ -50,4 +67,5 @@ export {
   tasksContainer,
   taskName,
   submit,
+  checkBoxesStatus,
 };
