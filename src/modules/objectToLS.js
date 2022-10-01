@@ -8,7 +8,7 @@ const addObjToLocalStorage = (value) => {
     index: indexCounter,
   };
   indexCounter += 1;
-  taskArray.push(object);
+  taskArray.unshift(object);
   store();
 };
 

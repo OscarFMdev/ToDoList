@@ -26,7 +26,7 @@
   align-items: center;
   background-color: white;
   opacity: 0.79;
-  height: 40%;
+  height: 60%;
   width: 25%;
   min-width: 350px;
   position: relative;
@@ -82,7 +82,6 @@ hr {
   flex-direction: column;
   row-gap: 10px;
   overflow: scroll;
-  height: 100%;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }

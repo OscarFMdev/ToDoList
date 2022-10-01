@@ -8,6 +8,9 @@ const taskName = document.querySelector('.new-task');
 const addTask = (e) => {
   e.preventDefault();
   if (!e.target.classList.contains('fa-right-from-bracket')) return;
+  if (!taskName.value) {
+    return;
+  }
   addObjToLocalStorage(taskName.value);
   taskName.value = '';
 };
@@ -21,11 +24,7 @@ const deleteTask = (e) => {
 
   // Remove element from array
   taskArray.splice((taskIndex - 1), 1);
-  // Remove from html
-  const htmlElement = document.querySelector(`.tasks-container :nth-child(${taskIndex})`);
-  const tasksHTML = document.querySelector('.tasks-container');
-
-  tasksHTML.deleteChild(htmlElement);
+  localStorage.setItem('taskInput', taskArray);
   store();
 };
 
