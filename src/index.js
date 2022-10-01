@@ -3,6 +3,7 @@ import displayTasks from './modules/display-tasks.js';
 import {
   addTask, deleteTask, edit, submit, tasksContainer,
 } from './modules/functions.js';
+// import { restoreIcons } from './modules/icons';
 
 /* Add and remove */
 

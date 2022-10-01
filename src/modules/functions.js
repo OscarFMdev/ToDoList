@@ -1,4 +1,5 @@
 import displayTasks from './display-tasks.js';
+import { changeIcon } from './icons.js';
 import addObjToLocalStorage from './objectToLS.js';
 import { store, taskArray } from './store.js';
 
@@ -27,13 +28,18 @@ const deleteTask = (e) => {
     localStorage.setItem('taskInput', taskArray);
     store();
     displayTasks();
+  } else {
+    changeIcon(e);
   }
 };
 
 const edit = (e) => {
   const editableText = e.target;
+  const threeDotsIcon = document.querySelector('.fa-solid');
   if (editableText.matches('p')) {
     editableText.setAttribute('contenteditable', 'true');
+    editableText.focus();
+    threeDotsIcon.classList.add('fa-regular', 'fa-trash-can', 'delete-icon');
   }
 };
 
