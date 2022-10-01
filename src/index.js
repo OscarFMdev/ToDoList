@@ -1,5 +1,5 @@
 import './style.css';
-import displayTasks from './modules/display-tasks';
+import displayTasks from './modules/display-tasks.js';
 import {
   addTask, deleteTask, submit, tasksContainer,
 } from './modules/class.js';
