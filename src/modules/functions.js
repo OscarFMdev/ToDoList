@@ -52,7 +52,15 @@ const checkBoxesStatus = (e) => {
   for (let i = 0; i < checkBoxes.length; i += 1) {
     if (clickLocation === checkBoxes[i]) {
       const element = clickLocation.closest('li');
-      console.log(element.dataset.indexNumber);
+      const arrrayNumber = element.dataset.indexNumber - 1;
+      const arrayElement = taskArray[arrrayNumber];
+      if (checkBoxes[i].checked) {
+        arrayElement.completed = true;
+        store();
+      } else {
+        arrayElement.completed = false;
+        store();
+      }
     }
   }
 };
