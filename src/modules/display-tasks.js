@@ -1,3 +1,5 @@
+/* Display tasks */
+
 import { store, taskArray } from './store.js';
 
 const displayTasks = () => {
@@ -13,7 +15,7 @@ const displayTasks = () => {
         <input class="complete-box" type="checkbox" name="checkbox" value="value">
         <label for="checkbox"><p class="editable">${task.description}</p></label>  
       </div>
-      <i class="fa-solid fa-ellipsis-vertical drag-icon editable-icon" data-index-number="${index + 1}"></i>
+      <i class="fa-regular fa-trash-can delete-icon" data-index-number="${index + 1}"></i>
     </li>
     <hr class="line-separator">
     <!-- Task -->
