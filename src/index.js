@@ -2,17 +2,12 @@ import './style.css';
 /* index.js */
 import displayTasks from './modules/display-tasks.js';
 import {
-  addTask, checkBoxesStatus, deleteTask, edit, submit, tasksContainer,
+  addTask, checkBoxesStatus, deleteTask, edit,
 } from './modules/functions.js';
-import { store, taskArray } from './modules/store';
+import { store, taskArray } from './modules/store.js';
 // import { restoreIcons } from './modules/icons';
 
 /* Add and remove */
-
-tasksContainer.addEventListener('click', (e) => {
-  checkBoxesStatus(e);
-});
-
 window.addEventListener('DOMContentLoaded', () => {
   const addBtn = document.querySelector('.fa-right-from-bracket');
   addBtn.addEventListener('click', (e) => {
@@ -30,6 +25,13 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < trashCans.length; i += 1) {
     trashCans[i].addEventListener('click', (e) => {
       deleteTask(e);
+    });
+  }
+
+  const allCheckBoxes = document.querySelectorAll('input[type=checkbox]');
+  for (let i = 0; i < allCheckBoxes.length; i += 1) {
+    allCheckBoxes[i].addEventListener('click', (e) => {
+      checkBoxesStatus(e);
     });
   }
 });
