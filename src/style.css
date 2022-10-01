@@ -8,12 +8,12 @@
   cursor: pointer;
 }
 
-.dots {
-  cursor: all-scroll;
+.delete {
+  cursor: pointer;
 }
 
 #card-bg {
-  background: lightblue;
+  background: linear-gradient(219deg, #3270d8, #d28d86);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,8 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
-  height: 40%;
+  opacity: 0.79;
+  height: 60%;
   width: 25%;
   min-width: 350px;
   position: relative;
@@ -80,6 +81,13 @@ hr {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.tasks-container::-webkit-scrollbar {
+  display: none;
 }
 
 .task {
