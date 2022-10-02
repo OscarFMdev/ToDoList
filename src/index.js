@@ -36,14 +36,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   deleteCompleted.addEventListener('click', () => {
     window.location.reload();
-    for (let i = 0; i < allCheckBoxes.length; i += 1) {
-      if (allCheckBoxes[i].checked === true) {
-        taskArray.splice(i, 1);
-        localStorage.setItem('taskInput', taskArray);
-        store();
+    const indexes = [];
+    for (let i = 0; i < taskArray.length; i += 1) {
+      if (taskArray[i].completed === true) {
+        indexes.push(i);
       }
     }
-    displayTasks();
+    for (let i = 0; i < indexes.length; i += 1) {
+      taskArray.splice(indexes[i], 1);
+      store();
+      displayTasks();
+    }
   });
 
   for (let i = 0; i < allCheckBoxes.length; i += 1) {
