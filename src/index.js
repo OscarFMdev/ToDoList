@@ -2,7 +2,10 @@ import './style.css';
 /* index.js */
 import displayTasks from './modules/display-tasks.js';
 import {
-  addTask, checkBoxesStatus, deleteTask, edit,
+  addTask,
+  checkBoxesStatus,
+  deleteTask,
+  edit,
 } from './modules/functions.js';
 import { store, taskArray } from './modules/store.js';
 // import { restoreIcons } from './modules/icons';
@@ -34,19 +37,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const deleteCompleted = document.querySelector('.completed-text');
   const allCheckBoxes = document.querySelectorAll('input[type=checkbox]');
 
+  function clearCompleted(elem) {
+    return elem.completed !== true;
+  }
+
   deleteCompleted.addEventListener('click', () => {
+    const data = taskArray.filter(clearCompleted);
+    localStorage.setItem('taskInput', JSON.stringify(data));
     window.location.reload();
-    const indexes = [];
-    for (let i = 0; i < taskArray.length; i += 1) {
-      if (taskArray[i].completed === true) {
-        indexes.push(i);
-      }
-    }
-    for (let i = 0; i < indexes.length; i += 1) {
-      taskArray.splice(indexes[i], 1);
-      store();
-      displayTasks();
-    }
   });
 
   for (let i = 0; i < allCheckBoxes.length; i += 1) {
