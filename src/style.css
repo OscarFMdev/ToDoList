@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-.delete {
+.delete-icon {
   cursor: pointer;
 }
 
@@ -119,6 +119,7 @@ hr {
 .completed-text {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .completed-text:hover {
