@@ -17,7 +17,7 @@ In this project we will be using webpack to create, edit, and delete tasks from 
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://oscarfmdev.github.io/ToDoList/dist/)
+[Live Demo Link](https://oscarfmdev.github.io/ToDoList/build/)
 
 
 ## Getting Started
