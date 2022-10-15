@@ -1,4 +1,4 @@
 import './style.css';
-import displayTasks from './modules/display-tasks.js';
+import displayTasks from './modules/displayTasks.js';
 
 displayTasks();
