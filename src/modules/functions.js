@@ -1,4 +1,3 @@
-import displayTasks from './display-tasks.js';
 import addObjToLocalStorage from './objectToLS.js';
 import { store, taskArray } from './store.js';
 
@@ -12,7 +11,6 @@ const addTask = (e) => {
     if (!taskName.value) return;
     addObjToLocalStorage(taskName.value);
     taskName.value = '';
-    displayTasks();
   }
 };
 
@@ -26,7 +24,6 @@ const deleteTask = (e) => {
     taskArray.splice(taskIndex - 1, 1);
     localStorage.setItem('taskInput', taskArray);
     store();
-    displayTasks();
   }
 };
 

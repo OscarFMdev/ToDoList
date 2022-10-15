@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import {
   addTask, checkBoxesStatus, deleteTask, edit,
 } from './functions.js';
@@ -35,14 +34,15 @@ const displayTasks = () => {
   const addBtn = document.querySelector('.fa-right-from-bracket');
   addBtn.addEventListener('click', (e) => {
     addTask(e);
+    displayTasks();
   });
 
   /* Delete */
   const trashCans = document.querySelectorAll('.delete-icon');
   for (let i = 0; i < trashCans.length; i += 1) {
     trashCans[i].addEventListener('click', (e) => {
-      displayTasks();
       deleteTask(e);
+      displayTasks();
     });
   }
 
