@@ -20,6 +20,10 @@
   height: 100vh;
 }
 
+.editable {
+  cursor: text;
+}
+
 #container {
   display: flex;
   flex-direction: column;
