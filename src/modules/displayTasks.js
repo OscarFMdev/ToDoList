@@ -1,6 +1,7 @@
 import {
   addTask, checkBoxesStatus, deleteTask, edit,
 } from './functions.js';
+import addObjToLocalStorage from './objectToLS.js';
 import { store, taskArray } from './store.js';
 
 const displayTasks = () => {
@@ -31,10 +32,20 @@ const displayTasks = () => {
     });
 
   /* Add */
+  const form = document.querySelector('form');
   const addBtn = document.querySelector('.fa-right-from-bracket');
   addBtn.addEventListener('click', (e) => {
     addTask(e);
     displayTasks();
+  });
+  form.addEventListener('keypress', (e) => {
+    const taskName = document.querySelector('.new-task');
+    if (e.key === 'Enter') {
+      if (!taskName.value) return;
+      addObjToLocalStorage(taskName.value);
+      displayTasks();
+      taskName.value = '';
+    }
   });
 
   /* Delete */
