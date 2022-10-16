@@ -63,20 +63,15 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  padding-bottom: 15px;
   margin-top: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .new-task {
   border: none;
   width: 270px;
   height: 40px;
-}
-
-hr {
-  background-color: lightgray;
-  height: 2px;
-  width: 100%;
 }
 
 .tasks-container {
@@ -101,7 +96,13 @@ hr {
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 30px;
+  height: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.task:nth-child(1) {
+  margin-top: 25px;
 }
 
 .task .left-side {
@@ -128,4 +129,14 @@ hr {
 
 .completed-text:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    height: 90vh;
+  }
+
+  .new-task {
+    height: 20px;
+  }
 }
